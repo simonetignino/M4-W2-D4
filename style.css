@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.price {
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+.add-cart {
+    font-size: 18px;
+}
+
+.hide {
+    font-size: 18px;
+}
+
+#book-card {
+    width: 300px;
+    height: 600px;
+}
+
+#book-img {
+    height: 400px;
+}
+
+#book-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.cart {
+    opacity: 0.5;
+}
+
+.fa-cart-shopping {
+    font-size: 20px;
+}

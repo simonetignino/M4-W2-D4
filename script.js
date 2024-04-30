@@ -1,10 +1,11 @@
 const url = "https://striveschool-api.herokuapp.com/books"
-let contenitore =``;
 // let libri = [];
+
+window.onload = () => 
 fetch(url)
   .then((response) => response.json())
   .then((libriOttenuti) => {
-    contenitore = document.getElementById(`book-result`);
+    let contenitore = document.getElementById(`book-result`);
     contenitore.innerHTML = libriOttenuti.map((libro) => {
       return `
       <div class="col col-md-4 col-lg-3" id="book-card">
@@ -18,7 +19,7 @@ fetch(url)
                                 €${libro.price}
                             </div>  
                             <div class="buttons-group d-flex align-items-center justify-content-center ">
-                                <button type="button" onclick="addCart()" class="btn btn-sm btn-outline-secondary border-0"><i class="fa-solid fa-cart-plus add-cart"></i></button>
+                                <button type="button" onclick="addToCart('${libro.title}', '${libro.price}')" class="btn btn-sm btn-outline-secondary border-0"><i class="fa-solid fa-cart-plus add-cart"></i></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary border-0"><i class="fa-regular fa-eye-slash hide"></i></button>                      
                             </div>
                         </div>
@@ -27,9 +28,18 @@ fetch(url)
             </div>
         </div>
       `;
-    });
+    }).join(``);
   });
 
-function addCart(){
-  console.log(contenitore);
-}
+
+const addToCart = (title, price) => {
+  let contenitore = document.getElementById(`cart`);
+    contenitore.innerHTML = `<div class="col-md-4">
+    <img src="..." class="img-fluid rounded-start" alt="...">
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title">${title}</h5>
+      <p class="card-text">${price}</p>
+    </div>`
+};

@@ -34,7 +34,7 @@ fetch(url)
 
 const addToCart = (title, price) => {
   let contenitore = document.getElementById(`cart`);
-    contenitore.innerHTML = `<div class="col-md-4">
+    contenitore.innerHTML += `<div class="col-md-4">
     <img src="..." class="img-fluid rounded-start" alt="...">
   </div>
   <div class="col-md-8">

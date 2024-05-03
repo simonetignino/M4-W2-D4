@@ -17,9 +17,9 @@
     font-size: 18px;
 }
 
-#book-card {
+.book-card {
     width: 300px;
-    height: 600px;
+    height: auto;
 }
 
 #book-img {
@@ -40,4 +40,16 @@
 
 .fa-cart-shopping {
     font-size: 20px;
+}
+
+.info {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.in-to-cart {
+    box-shadow: 2px 2px 2px 2px red;
 }

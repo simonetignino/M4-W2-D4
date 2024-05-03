@@ -3,8 +3,7 @@ Usa tutti i nuovi tools e features che hai imparato per creare un'applicazione c
 seguenti requisiti:
 
     (x) Una homepage che mostri tutti i libri con delle card di bootstrap
-    () Le card dovrebbero avere un pulsante per aggiungere al carrello e uno per
-      "saltare" un prodotto
+    (x) Le card dovrebbero avere un pulsante per aggiungere al carrello e uno per "saltare" un prodotto
     (x) Una sezione per il carrello
     (x) Un input di testo per cercare i libri
 
@@ -17,7 +16,7 @@ Per raggiungere questo risultato, segui queste istruzioni:
     • Assicurati che dentro ad ogni card ci sia un pulsante "Aggiungi al carrello"
 
     Quando il pulsante viene cliccato...
-    () Aggiungi il libro alla lista del carrello
+    (x) Aggiungi il libro alla lista del carrello
     () Cambia lo stile della card per mostrare che è già stata aggiunta (un bordo colorato o un badge vanno bene)
 
     () Aggiungi un input di testo che funzioni come una barra di ricerca. Quando l'utente scrive più di 3 caratteri, filtra il risultato    dell'API per renderizzare solo i libri con un titolo che corrisponda, anche parzialmente, al contenuto dell'input. SUGGERIMENTO: usa .filter()
@@ -29,5 +28,5 @@ EXTRA FACOLTATIVI:
 
 ------------------------------------------------------------------------------------------
 TODO 
-() Sezione per il carrello
+(X) Sezione per il carrello
 () Sezione "search" per cercare titoli di libri

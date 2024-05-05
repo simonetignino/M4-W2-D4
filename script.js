@@ -43,12 +43,13 @@ const addToCart = (title, price, id) => {
     <div class="card col-md-8" id="${id}">
       <div class="card-body">
         <h5 class="card-title">${title}</h5>
-        <p class="card-text">€${price}</p>
+        <p id="price" class="card-text">€${price}</p>
         <button onclick="remove(${id})" class="border-0 bg-transparent">Rimuovi</button>
       </div>
     </div>`
   let inToCart = document.getElementById(`book_${id}`)
   inToCart.classList.toggle(`in-to-cart`)
+  conta();
 };
 
 
@@ -56,6 +57,7 @@ const addToCart = (title, price, id) => {
 const svuota = () => {
   let contenitore = document.getElementById(`cart`)
   contenitore.innerHTML = ``;
+  conta();
 }
 
 // funzione per nascondere un articolo 
@@ -99,9 +101,30 @@ filterInput.addEventListener(`input`, () =>{
   });
 })
 
+// funzione per rimuovere un articolo dal carrello
 function remove (id) {
   let card = document.getElementById(id)
   card.innerHTML = ``;
+  conta(1);
 }
 
 // non capisco perchè, la funzoine rimuovi dal carrello e nascondi (funzionano entrambe con gli ID) non funziona su tutte le card
+let totalPrice = 0;
+function conta (num) {
+  if (!num) {
+    num = 0;
+  }
+  let articoli = document.querySelectorAll('#cart .card');
+  console.log(articoli.json);
+  console.log(articoli.length - num);
+  articoli.forEach(articolo => {
+    price = document.getElementById(`price`);
+    price = price.innerHTML.slice(1);
+    price = parseFloat(price);
+    console.log(price);
+    totalPrice+=price;
+    price = 0;
+    console.log(price);
+  })
+  console.log(totalPrice);
+}

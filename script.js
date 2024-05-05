@@ -36,27 +36,29 @@ window.onload = () => {
   })
 }
   
-
-
+// funzione per aggiungere al carrello 
 const addToCart = (title, price, id) => {
   let contenitore = document.getElementById(`cart`);
     contenitore.innerHTML += `
-    <div class="card col-md-8">
+    <div class="card col-md-8" id="${id}">
       <div class="card-body">
         <h5 class="card-title">${title}</h5>
         <p class="card-text">€${price}</p>
-        <button class="border-0 bg-transparent" id="rimuovi">Rimuovi</button>
+        <button onclick="remove(${id})" class="border-0 bg-transparent">Rimuovi</button>
       </div>
     </div>`
   let inToCart = document.getElementById(`book_${id}`)
   inToCart.classList.toggle(`in-to-cart`)
 };
 
+
+// funzione per svuotare il carrello 
 const svuota = () => {
   let contenitore = document.getElementById(`cart`)
   contenitore.innerHTML = ``;
 }
 
+// funzione per nascondere un articolo 
 function hide(id) {
   let hidden = document.getElementById(`book_${id}`)
   hidden.classList.add(`hidden`);
@@ -97,6 +99,9 @@ filterInput.addEventListener(`input`, () =>{
   });
 })
 
-function remove () {
-
+function remove (id) {
+  let card = document.getElementById(id)
+  card.innerHTML = ``;
 }
+
+// non capisco perchè, la funzoine rimuovi dal carrello e nascondi (funzionano entrambe con gli ID) non funziona su tutte le card

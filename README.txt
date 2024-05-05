@@ -22,7 +22,7 @@ Per raggiungere questo risultato, segui queste istruzioni:
     (x) Aggiungi un input di testo che funzioni come una barra di ricerca. Quando l'utente scrive più di 3 caratteri, filtra il risultato    dell'API per renderizzare solo i libri con un titolo che corrisponda, anche parzialmente, al contenuto dell'input. SUGGERIMENTO: usa .filter()
 
 EXTRA FACOLTATIVI:
-    () Dai la possibilità all'utente di cancellare libri dal loro carrello
+    (x) Dai la possibilità all'utente di cancellare libri dal loro carrello
     () Conta gli elementi nel carrello e mostra il risultato nella sezione carrello
     (x) Crea un pulsante per svuotare il carrello
 
